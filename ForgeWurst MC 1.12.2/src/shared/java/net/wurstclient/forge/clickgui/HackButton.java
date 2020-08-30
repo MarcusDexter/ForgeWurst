@@ -44,7 +44,7 @@ public final class HackButton extends Component
 				return;
 			}
 			
-			settingsWindow = new Window(hack.getName() + " Settings");
+			settingsWindow = new Window(hack.getName() + "设置");
 			for(Setting setting : hack.getSettings().values())
 				settingsWindow.add(setting.getComponent());
 			

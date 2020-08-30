@@ -40,7 +40,7 @@ public final class XRayHack extends Hack
 	
 	public XRayHack()
 	{
-		super("X-Ray", "Allows you to see ores through walls.");
+		super("透视", "让你可以透过墙壁看到矿石。");
 		setCategory(Category.RENDER);
 		addSetting(blocks);
 	}

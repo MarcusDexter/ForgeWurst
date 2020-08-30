@@ -25,8 +25,7 @@ public final class AntiSpamHack extends Hack
 {
 	public AntiSpamHack()
 	{
-		super("AntiSpam",
-			"Blocks chat spam by adding a\n" + "counter to repeated messages.");
+		super("屏蔽垃圾邮件", "通过添加计数器来阻止聊天垃圾信息。");
 		setCategory(Category.CHAT);
 	}
 	

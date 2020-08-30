@@ -49,7 +49,7 @@ import net.wurstclient.forge.utils.RotationUtils;
 public final class AutoFarmHack extends Hack
 {
 	private final SliderSetting range =
-		new SliderSetting("Range", 5, 1, 6, 0.05, ValueDisplay.DECIMAL);
+		new SliderSetting("范围", 5, 1, 6, 0.05, ValueDisplay.DECIMAL);
 	
 	private final HashMap<BlockPos, Item> plants = new HashMap<>();
 	
@@ -64,9 +64,9 @@ public final class AutoFarmHack extends Hack
 	
 	public AutoFarmHack()
 	{
-		super("AutoFarm", "Harvests and re-plants crops automatically.\n"
-			+ "Works with wheat, carrots, potatoes, beetroots,\n"
-			+ "pumpkins, melons, cacti, sugar canes and\n" + "nether warts.");
+		super("自动农场", "自动收割和重新种植作物。\n"
+			+ "适用于小麦、胡萝卜、土豆、甜菜根、\n"
+			+ "南瓜、西瓜、仙人掌、甘蔗和地狱疣。");
 		setCategory(Category.BLOCKS);
 		addSetting(range);
 	}
