@@ -17,7 +17,7 @@ public final class FullbrightHack extends Hack
 {
 	public FullbrightHack()
 	{
-		super("Fullbright", "Allows you to see in the dark.");
+		super("无限夜视", "让您在黑暗中看到一切。");
 		setCategory(Category.RENDER);
 	}
 	

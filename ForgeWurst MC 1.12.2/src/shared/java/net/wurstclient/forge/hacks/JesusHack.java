@@ -32,18 +32,16 @@ import net.wurstclient.forge.utils.BlockUtils;
 public final class JesusHack extends Hack
 {
 	private final CheckboxSetting preventJumping =
-		new CheckboxSetting("Prevent jumping",
-			"Prevents you from jumping on water.\n"
-				+ "On NoCheat+ servers, you can still jump on water by\n"
-				+ "pressing the sneak & jump keys at the exact same\n"
-				+ "time (may require a bit of practice).",
+		new CheckboxSetting("防止跳跃",
+			"防止您在水上不停地跳。\n"
+				+ "在防作弊服务器上，您仍然可以通过同时按下[潜行]+[跳跃]键来站在水上（可能需要一些练习）。",
 			false);
 	private int tickTimer;
 	
 	public JesusHack()
 	{
-		super("Jesus", "Allows you to walk on water.\n"
-			+ "Jesus used this hack ~2000 years ago.");
+		super("耶稣", "让您在水上行走。\n"
+			+ "大约2000年前，耶稣也这么干过。");
 		setCategory(Category.MOVEMENT);
 		addSetting(preventJumping);
 	}

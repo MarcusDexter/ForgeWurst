@@ -19,7 +19,7 @@ public final class FastLadderHack extends Hack
 {
 	public FastLadderHack()
 	{
-		super("FastLadder", "Allows you to climb up ladders faster.");
+		super("快速爬梯", "让你更快地爬上梯子。");
 		setCategory(Category.MOVEMENT);
 	}
 	

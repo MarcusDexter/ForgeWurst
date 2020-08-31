@@ -41,21 +41,17 @@ import net.wurstclient.forge.utils.PlayerControllerUtils;
 public final class AutoArmorHack extends Hack
 {
 	private final CheckboxSetting useEnchantments = new CheckboxSetting(
-		"Use enchantments", "Whether or not to consider the Protection\n"
-			+ "enchantment when calculating armor strength.",
+		"使用附魔", "计算护甲强度时是否考虑防护附魔。",
 		true);
 	private final CheckboxSetting swapWhileMoving =
-		new CheckboxSetting("Swap while moving",
-			"Whether or not to swap armor pieces\n"
-				+ "while the player is moving.\n\n" + ChatFormatting.RED
-				+ ChatFormatting.BOLD + "WARNING:" + ChatFormatting.RESET
-				+ " This would not be possible\n"
-				+ "without cheats. It may raise suspicion.",
+		new CheckboxSetting("移动时更换",
+			"是否在玩家移动时更换盔甲。\n\n" + ChatFormatting.RED
+				+ ChatFormatting.BOLD + "注意:" + ChatFormatting.RESET
+				+ " 如果没有作弊，这是不可能的。这可能会引起怀疑。",
 			false);
 	private final SliderSetting delay =
-		new SliderSetting("Delay",
-			"Amount of ticks to wait before swapping\n"
-				+ "the next piece of armor.",
+		new SliderSetting("时间间隔",
+			"在换下一件盔甲前的时间间隔。",
 			2, 0, 20, 1, ValueDisplay.INTEGER);
 	
 	private int timer;

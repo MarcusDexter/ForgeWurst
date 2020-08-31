@@ -41,16 +41,16 @@ public final class PlayerEspHack extends Hack
 	private final EnumSetting<Style> style =
 		new EnumSetting<>("Style", Style.values(), Style.BOXES);
 	private final CheckboxSetting filterSleeping = new CheckboxSetting(
-		"Filter sleeping", "Won't show sleeping players.", false);
+		"过滤睡觉的玩家", "不会显示睡觉的玩家。", false);
 	private final CheckboxSetting filterInvisible = new CheckboxSetting(
-		"Filter invisible", "Won't show invisible players.", false);
+		"过滤隐身玩家", "不会显示隐身玩家。", false);
 	
 	private int playerBox;
 	private final ArrayList<EntityPlayer> players = new ArrayList<>();
 	
 	public PlayerEspHack()
 	{
-		super("PlayerESP", "Highlights nearby players.");
+		super("高亮玩家", "高亮附近的玩家。");
 		setCategory(Category.RENDER);
 		addSetting(style);
 		addSetting(filterSleeping);

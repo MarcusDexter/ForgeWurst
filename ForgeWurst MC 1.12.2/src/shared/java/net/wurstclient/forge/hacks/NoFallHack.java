@@ -18,7 +18,7 @@ public final class NoFallHack extends Hack
 {
 	public NoFallHack()
 	{
-		super("NoFall", "Protects you from fall damage.");
+		super("跌落保护", "保护你免受坠落伤害。");
 		setCategory(Category.MOVEMENT);
 	}
 	

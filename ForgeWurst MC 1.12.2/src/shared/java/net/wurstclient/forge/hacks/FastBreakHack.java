@@ -22,7 +22,7 @@ public final class FastBreakHack extends Hack
 {
 	public FastBreakHack()
 	{
-		super("FastBreak", "Allows you to break blocks faster.");
+		super("快速破坏", "允许您更快地破坏方块。");
 		setCategory(Category.BLOCKS);
 	}
 	

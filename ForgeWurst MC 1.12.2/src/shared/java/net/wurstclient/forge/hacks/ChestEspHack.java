@@ -53,11 +53,11 @@ public final class ChestEspHack extends Hack
 	
 	public ChestEspHack()
 	{
-		super("ChestESP",
-			"Highlights nearby chests.\n"
-				+ "\u00a7agreen\u00a7r - normal chests\n"
-				+ "\u00a76orange\u00a7r - trapped chests\n"
-				+ "\u00a7bcyan\u00a7r - ender chests");
+		super("高亮箱子",
+			"高亮附近的箱子。\n"
+				+ "\u00a7a绿色\u00a7r - 箱子\n"
+				+ "\u00a76橙色\u00a7r - 陷阱箱\n"
+				+ "\u00a7b青色\u00a7r - 末影箱");
 		setCategory(Category.RENDER);
 		addSetting(style);
 	}

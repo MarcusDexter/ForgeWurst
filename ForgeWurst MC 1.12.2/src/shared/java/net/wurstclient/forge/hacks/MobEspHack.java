@@ -39,14 +39,14 @@ public final class MobEspHack extends Hack
 	private final EnumSetting<Style> style =
 		new EnumSetting<>("Style", Style.values(), Style.BOXES);
 	private final CheckboxSetting filterInvisible = new CheckboxSetting(
-		"Filter invisible", "Won't show invisible mobs.", false);
+		"过滤隐形怪物", "不显示隐形怪物", false);
 	
 	private int mobBox;
 	private final ArrayList<EntityLiving> mobs = new ArrayList<>();
 	
 	public MobEspHack()
 	{
-		super("MobESP", "Highlights nearby mobs.");
+		super("怪物高亮", "高亮显示附近的怪物");
 		setCategory(Category.RENDER);
 		addSetting(style);
 		addSetting(filterInvisible);

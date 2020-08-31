@@ -19,7 +19,7 @@ public final class SpiderHack extends Hack
 {
 	public SpiderHack()
 	{
-		super("Spider", "Allows you to climb up walls like a spider.");
+		super("爬墙", "让你像蜘蛛一样爬上墙壁。");
 		setCategory(Category.MOVEMENT);
 	}
 	

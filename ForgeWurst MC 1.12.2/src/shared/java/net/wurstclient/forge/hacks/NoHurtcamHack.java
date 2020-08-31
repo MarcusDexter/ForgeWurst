@@ -17,7 +17,7 @@ public final class NoHurtcamHack extends Hack
 {
 	public NoHurtcamHack()
 	{
-		super("NoHurtcam", "Disables the shaking effect when you get hurt.");
+		super("关闭伤害抖动效果", "关闭你受伤时的抖动效果。");
 		setCategory(Category.RENDER);
 	}
 	

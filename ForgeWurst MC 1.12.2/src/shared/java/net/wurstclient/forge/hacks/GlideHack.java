@@ -28,19 +28,19 @@ import net.wurstclient.forge.utils.BlockUtils;
 
 public final class GlideHack extends Hack
 {
-	private final SliderSetting fallSpeed = new SliderSetting("Fall speed",
+	private final SliderSetting fallSpeed = new SliderSetting("下落速度",
 		0.125, 0.005, 0.25, 0.005, ValueDisplay.DECIMAL);
 	private final SliderSetting moveSpeed =
-		new SliderSetting("Move speed", "Horizontal movement factor.", 1.2, 1,
+		new SliderSetting("移动速度", "水平移动系数。", 1.2, 1,
 			5, 0.05, ValueDisplay.PERCENTAGE);
-	private final SliderSetting minHeight = new SliderSetting("Min height",
-		"Won't glide when you are\n" + "too close to the ground.", 0, 0, 2,
+	private final SliderSetting minHeight = new SliderSetting("最小高度",
+		"当您离地面太近时不会滑行。", 0, 0, 2,
 		0.01,
 		v -> v == 0 ? "disabled" : ValueDisplay.DECIMAL.getValueString(v));
 	
 	public GlideHack()
 	{
-		super("Glide", "Makes you glide down slowly when falling.");
+		super("滑翔", "使您掉落时缓慢滑翔。");
 		setCategory(Category.MOVEMENT);
 		addSetting(fallSpeed);
 		addSetting(moveSpeed);

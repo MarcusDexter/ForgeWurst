@@ -19,7 +19,7 @@ public final class AutoSprintHack extends Hack
 {
 	public AutoSprintHack()
 	{
-		super("AutoSprint", "Makes you sprint automatically.");
+		super("自动冲刺", "让你自动冲刺。");
 		setCategory(Category.MOVEMENT);
 	}
 	

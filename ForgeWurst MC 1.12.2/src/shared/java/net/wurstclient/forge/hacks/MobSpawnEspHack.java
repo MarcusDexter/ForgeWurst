@@ -56,20 +56,20 @@ import net.wurstclient.forge.utils.RotationUtils;
 public final class MobSpawnEspHack extends Hack
 {
 	private final EnumSetting<DrawDistance> drawDistance = new EnumSetting<>(
-		"Draw distance", DrawDistance.values(), DrawDistance.D9);
+		"范围", DrawDistance.values(), DrawDistance.D9);
 	private final SliderSetting loadingSpeed =
-		new SliderSetting("Loading speed", 1, 1, 5, 1, v -> (int)v + "x");
+		new SliderSetting("载入速度", 1, 1, 5, 1, v -> (int)v + "x");
 	
 	private final HashMap<Chunk, ChunkScanner> scanners = new HashMap<>();
 	private ExecutorService pool;
 	
 	public MobSpawnEspHack()
 	{
-		super("MobSpawnESP",
-			"Highlights areas where mobs can spawn.\n" + ChatFormatting.YELLOW
-				+ "yellow" + ChatFormatting.RESET
-				+ " - mobs can spawn at night\n" + ChatFormatting.RED + "red"
-				+ ChatFormatting.RESET + " - mobs can always spawn");
+		super("怪物生成高亮",
+			"高亮显示能生成怪物的地方\n" + ChatFormatting.YELLOW
+				+ "黄色" + ChatFormatting.RESET
+				+ " - 夜间生成怪物\n" + ChatFormatting.RED + "红色"
+				+ ChatFormatting.RESET + " - 昼夜都会生成怪物");
 		setCategory(Category.RENDER);
 		addSetting(drawDistance);
 		addSetting(loadingSpeed);

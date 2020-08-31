@@ -32,7 +32,7 @@ public final class BlinkHack extends Hack
 	
 	public BlinkHack()
 	{
-		super("Blink", "Suspends all motion updates while enabled.");
+		super("Blink", "启用时暂停所有运动更新。");
 		setCategory(Category.MOVEMENT);
 		addSetting(limit);
 	}

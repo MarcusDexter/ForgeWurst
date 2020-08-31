@@ -38,7 +38,7 @@ import net.wurstclient.forge.utils.RotationUtils;
 public final class ItemEspHack extends Hack
 {
 	private final CheckboxSetting names =
-		new CheckboxSetting("Show item names", true);
+		new CheckboxSetting("显示物品的名称", true);
 	private final EnumSetting<Style> style =
 		new EnumSetting<>("Style", Style.values(), Style.BOXES);
 	
@@ -47,7 +47,7 @@ public final class ItemEspHack extends Hack
 	
 	public ItemEspHack()
 	{
-		super("ItemESP", "Highlights nearby items.");
+		super("物品高亮", "高亮显示附近的物品。");
 		setCategory(Category.RENDER);
 		addSetting(names);
 		addSetting(style);

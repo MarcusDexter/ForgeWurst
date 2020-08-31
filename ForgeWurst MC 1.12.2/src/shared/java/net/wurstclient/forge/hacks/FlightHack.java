@@ -19,14 +19,13 @@ import net.wurstclient.forge.settings.SliderSetting.ValueDisplay;
 public final class FlightHack extends Hack
 {
 	private final SliderSetting speed =
-		new SliderSetting("Speed", 1, 0.05, 5, 0.05, ValueDisplay.DECIMAL);
+		new SliderSetting("速度", 1, 0.05, 5, 0.05, ValueDisplay.DECIMAL);
 	
 	public FlightHack()
 	{
-		super("Flight",
-			"Allows you to fly.\n\n"
-				+ "\u00a7c\u00a7lWARNING:\u00a7r You will take fall damage\n"
-				+ "if you don't use NoFall.");
+		super("飞行",
+			"可以让您飞在空中\n\n"
+				+ "\u00a7c\u00a7l注意:\u00a7r 如果没有开启防止跌落伤害，您将受到跌落伤害。");
 		setCategory(Category.MOVEMENT);
 		addSetting(speed);
 	}

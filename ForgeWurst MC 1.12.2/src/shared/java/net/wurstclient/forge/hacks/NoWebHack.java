@@ -21,7 +21,7 @@ public final class NoWebHack extends Hack
 {
 	public NoWebHack()
 	{
-		super("NoWeb", "Prevents you from getting slowed down in webs.");
+		super("无视蛛网减速", "无视蛛网的减速效果。");
 		setCategory(Category.MOVEMENT);
 	}
 	

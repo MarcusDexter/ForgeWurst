@@ -62,9 +62,7 @@ public final class AutoFishHack extends Hack
 	
 	public AutoFishHack()
 	{
-		super("AutoFish", "Automatically catches fish using your\n"
-			+ "best fishing rod. If it finds a better\n"
-			+ "rod while fishing, it will automatically\n" + "switch to it.");
+		super("自动钓鱼", "使用您最好的钓鱼竿自动捕获鱼。如果在钓鱼时发现更好的钓竿，它将自动切换到钓竿。");
 		setCategory(Category.OTHER);
 		addSetting(validRange);
 		addSetting(debugDraw);
@@ -162,7 +160,7 @@ public final class AutoFishHack extends Hack
 		
 		if(bestRodSlot == -1)
 		{
-			ChatUtils.message("Out of fishing rods.");
+			ChatUtils.message("没有钓鱼竿。");
 			setEnabled(false);
 			return;
 		}

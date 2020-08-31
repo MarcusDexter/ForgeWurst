@@ -25,7 +25,7 @@ public final class BunnyHopHack extends Hack
 	
 	public BunnyHopHack()
 	{
-		super("BunnyHop", "Makes you jump automatically.");
+		super("BunnyHop", "让你自动跳起来。");
 		setCategory(Category.MOVEMENT);
 		addSetting(jumpIf);
 	}

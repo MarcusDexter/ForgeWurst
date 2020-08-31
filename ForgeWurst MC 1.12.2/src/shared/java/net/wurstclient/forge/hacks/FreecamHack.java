@@ -30,14 +30,13 @@ import net.wurstclient.forge.utils.KeyBindingUtils;
 public final class FreecamHack extends Hack
 {
 	private final SliderSetting speed =
-		new SliderSetting("Speed", 1, 0.05, 10, 0.05, ValueDisplay.DECIMAL);
+		new SliderSetting("速度", 1, 0.05, 10, 0.05, ValueDisplay.DECIMAL);
 	
 	private EntityFakePlayer fakePlayer;
 	
 	public FreecamHack()
 	{
-		super("Freecam", "Allows you to move the camera\n"
-			+ "without moving your character.");
+		super("灵魂出窍", "允许您在不移动角色的情况下移动视野。");
 		setCategory(Category.RENDER);
 		addSetting(speed);
 	}

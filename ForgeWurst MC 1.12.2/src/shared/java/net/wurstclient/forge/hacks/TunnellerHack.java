@@ -55,18 +55,16 @@ import net.wurstclient.forge.utils.RotationUtils;
 public final class TunnellerHack extends Hack
 {
 	private final EnumSetting<TunnelSize> size = new EnumSetting<>(
-		"Tunnel size", TunnelSize.values(), TunnelSize.SIZE_3X3);
+		"隧道尺寸", TunnelSize.values(), TunnelSize.SIZE_3X3);
 	
-	private final SliderSetting limit = new SliderSetting("Limit",
-		"Automatically stops once the tunnel\n"
-			+ "has reached the given length.\n\n" + "0 = no limit",
+	private final SliderSetting limit = new SliderSetting("长度",
+		"隧道到达给定长度后自动停止。\n\n" + "0 = 无限远",
 		0, 0, 1000, 1,
-		v -> v == 0 ? "disabled" : v == 1 ? "1 block" : (int)v + " blocks");
+		v -> v == 0 ? "disabled" : v == 1 ? "1 方块" : (int)v + " 方块");
 	
 	private final CheckboxSetting torches =
 		new CheckboxSetting(
-			"Place torches", "Places just enough torches\n"
-				+ "to prevent mobs from\n" + "spawning inside the tunnel.",
+			"放置火把", "放置足够的火把以防止僵尸在隧道内滋生。",
 			false);
 	
 	private BlockPos start;
@@ -82,13 +80,10 @@ public final class TunnellerHack extends Hack
 	
 	public TunnellerHack()
 	{
-		super("Tunneller",
-			"Automatically digs a tunnel.\n\n" + ChatFormatting.RED
-				+ ChatFormatting.BOLD + "WARNING:" + ChatFormatting.RESET
-				+ " Although this bot will try to avoid\n"
-				+ "lava and other dangers, there is no guarantee\n"
-				+ "that it won't die. Only send it out with gear\n"
-				+ "that you don't mind losing.");
+		super("自动挖掘",
+			"自动挖掘隧道。\n\n" + ChatFormatting.RED
+				+ ChatFormatting.BOLD + "注意:" + ChatFormatting.RESET
+				+ " 虽然这个功能会尽量避免熔岩和其他危险，但不能保证它不会死。除非开启了死亡不掉落或者你不介意丢的装备。");
 		setCategory(Category.BLOCKS);
 		addSetting(size);
 		addSetting(limit);
@@ -336,7 +331,7 @@ public final class TunnellerHack extends Hack
 					updateCyanList();
 				else
 				{
-					ChatUtils.message("Tunnel completed.");
+					ChatUtils.message("隧道完工。");
 					setEnabled(false);
 				}
 				

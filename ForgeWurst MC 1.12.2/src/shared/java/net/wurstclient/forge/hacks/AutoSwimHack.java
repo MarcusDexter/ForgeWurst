@@ -23,7 +23,7 @@ public final class AutoSwimHack extends Hack
 	
 	public AutoSwimHack()
 	{
-		super("AutoSwim", "Makes you swim automatically.");
+		super("自动游泳", "让你能自动游泳。");
 		setCategory(Category.MOVEMENT);
 		addSetting(mode);
 	}

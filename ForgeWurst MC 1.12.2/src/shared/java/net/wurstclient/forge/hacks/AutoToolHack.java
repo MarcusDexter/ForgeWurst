@@ -27,22 +27,19 @@ import net.wurstclient.forge.utils.BlockUtils;
 
 public final class AutoToolHack extends Hack
 {
-	private final CheckboxSetting useSwords = new CheckboxSetting("Use swords",
-		"Uses swords to break\n" + "leaves, cobwebs, etc.", false);
+	private final CheckboxSetting useSwords = new CheckboxSetting("使用剑",
+		"用剑击碎树叶、蜘蛛网等。", false);
 	private final CheckboxSetting useHands =
 		new CheckboxSetting(
-			"Use hands", "Uses an empty hand or a\n"
-				+ "non-damageable item when\n" + "no applicable tool is found.",
+			"使用手", "在找不到合适的工具时，使用空手或非损坏物品。",
 			true);
 	private final CheckboxSetting repairMode = new CheckboxSetting(
-		"Repair mode", "Won't use tools that are about to break.", false);
+		"维修模式", "不会使用即将损坏的工具。", false);
 	
 	public AutoToolHack()
 	{
-		super("AutoTool",
-			"Automatically equips the fastest\n"
-				+ "applicable tool in your hotbar\n"
-				+ "when you try to break a block.");
+		super("自动选择工具",
+			"当你试图打破一个方块时，自动选择最快的工具。");
 		setCategory(Category.BLOCKS);
 		addSetting(useSwords);
 		addSetting(useHands);

@@ -51,57 +51,55 @@ import net.wurstclient.forge.utils.RotationUtils;
 public final class KillauraHack extends Hack
 {
 	private final SliderSetting range =
-		new SliderSetting("Range", 5, 1, 10, 0.05, ValueDisplay.DECIMAL);
+		new SliderSetting("范围", 5, 1, 10, 0.05, ValueDisplay.DECIMAL);
 	
-	private final EnumSetting<Priority> priority = new EnumSetting<>("Priority",
-		"Determines which entity will be attacked first.\n"
-			+ "\u00a7lDistance\u00a7r - Attacks the closest entity.\n"
-			+ "\u00a7lAngle\u00a7r - Attacks the entity that requires\n"
-			+ "the least head movement.\n"
-			+ "\u00a7lHealth\u00a7r - Attacks the weakest entity.",
+	private final EnumSetting<Priority> priority = new EnumSetting<>("优先权",
+		"确定哪个实体将首先受到攻击。\n"
+			+ "\u00a7l距离\u00a7r - 攻击最近的实体。\n"
+			+ "\u00a7l角度\u00a7r - 攻击离准心最近的实体。\n"
+			+ "\u00a7l生命值\u00a7r - 攻击最弱的实体。",
 		Priority.values(), Priority.ANGLE);
 	
 	private final CheckboxSetting filterPlayers = new CheckboxSetting(
-		"Filter players", "Won't attack other players.", false);
+		"过滤玩家", "不会攻击其他玩家。", false);
 	private final CheckboxSetting filterSleeping = new CheckboxSetting(
-		"Filter sleeping", "Won't attack sleeping players.", false);
+		"过滤睡着的玩家", "不会攻击沉睡的玩家。", false);
 	private final SliderSetting filterFlying =
-		new SliderSetting("Filter flying",
-			"Won't attack players that\n" + "are at least the given\n"
-				+ "distance above ground.",
+		new SliderSetting("过滤飞行状态的实体",
+			"不会攻击离地面有一定高度的玩家。",
 			0, 0, 2, 0.05,
 			v -> v == 0 ? "off" : ValueDisplay.DECIMAL.getValueString(v));
 	
 	private final CheckboxSetting filterMonsters = new CheckboxSetting(
-		"Filter monsters", "Won't attack zombies, creepers, etc.", false);
+		"过滤怪物", "不会攻击僵尸，苦力怕等。", false);
 	private final CheckboxSetting filterPigmen = new CheckboxSetting(
-		"Filter pigmen", "Won't attack zombie pigmen.", false);
+		"过滤猪人", "不会攻击猪人。", false);
 	private final CheckboxSetting filterEndermen =
-		new CheckboxSetting("Filter endermen", "Won't attack endermen.", false);
+		new CheckboxSetting("过滤末影人", "不会攻击末影人.", false);
 	
 	private final CheckboxSetting filterAnimals = new CheckboxSetting(
-		"Filter animals", "Won't attack pigs, cows, etc.", false);
+		"过滤动物", "不会攻击猪、牛等。", false);
 	private final CheckboxSetting filterBabies =
-		new CheckboxSetting("Filter babies",
-			"Won't attack baby pigs,\n" + "baby villagers, etc.", false);
+		new CheckboxSetting("过滤幼年实体",
+			"不会攻击猪宝宝，村民宝宝等。", false);
 	private final CheckboxSetting filterPets =
-		new CheckboxSetting("Filter pets",
-			"Won't attack tamed wolves,\n" + "tamed horses, etc.", false);
+		new CheckboxSetting("过滤宠物",
+			"不会攻击驯服的狼、驯服的马等。", false);
 	
 	private final CheckboxSetting filterVillagers = new CheckboxSetting(
-		"Filter villagers", "Won't attack villagers.", false);
+		"过滤村民", "不会攻击村民。", false);
 	private final CheckboxSetting filterGolems =
-		new CheckboxSetting("Filter golems",
-			"Won't attack iron golems,\n" + "snow golems and shulkers.", false);
+		new CheckboxSetting("过滤傀儡",
+			"不会攻击铁傀儡，雪傀儡和潜影贝。", false);
 	
 	private final CheckboxSetting filterInvisible = new CheckboxSetting(
-		"Filter invisible", "Won't attack invisible entities.", false);
+		"过滤不可见实体", "不会攻击看不见的实体。", false);
 	
 	private EntityLivingBase target;
 	
 	public KillauraHack()
 	{
-		super("Killaura", "Automatically attacks entities around you.");
+		super("自动攻击", "自动攻击您周围的实体。");
 		setCategory(Category.COMBAT);
 		addSetting(range);
 		addSetting(priority);
@@ -272,14 +270,14 @@ public final class KillauraHack extends Hack
 	
 	private enum Priority
 	{
-		DISTANCE("Distance",
+		DISTANCE("距离",
 			e -> WEntity.getDistanceSq(WMinecraft.getPlayer(), e)),
 		
-		ANGLE("Angle",
+		ANGLE("角度",
 			e -> RotationUtils
 				.getAngleToLookVec(e.getEntityBoundingBox().getCenter())),
 		
-		HEALTH("Health", e -> e.getHealth());
+		HEALTH("生命值", e -> e.getHealth());
 		
 		private final String name;
 		private final Comparator<EntityLivingBase> comparator;

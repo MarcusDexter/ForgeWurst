@@ -19,7 +19,7 @@ public final class FastPlaceHack extends Hack
 {
 	public FastPlaceHack()
 	{
-		super("FastPlace", "Allows you to place blocks 5 times faster.");
+		super("快速建造", "允许你放置方块快5倍。");
 		setCategory(Category.BLOCKS);
 	}
 	

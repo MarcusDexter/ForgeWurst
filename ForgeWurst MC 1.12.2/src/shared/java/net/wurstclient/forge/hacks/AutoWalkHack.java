@@ -18,7 +18,7 @@ public final class AutoWalkHack extends Hack
 {
 	public AutoWalkHack()
 	{
-		super("AutoWalk", "Makes you walk automatically.");
+		super("自动行走", "使您自动行走。");
 		setCategory(Category.MOVEMENT);
 	}
 	

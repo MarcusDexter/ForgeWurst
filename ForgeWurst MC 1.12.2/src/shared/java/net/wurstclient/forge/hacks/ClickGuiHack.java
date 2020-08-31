@@ -20,10 +20,10 @@ import net.wurstclient.forge.settings.SliderSetting.ValueDisplay;
 @Hack.DontSaveState
 public final class ClickGuiHack extends Hack
 {
-	private final SliderSetting opacity = new SliderSetting("Opacity", 0.5,
+	private final SliderSetting opacity = new SliderSetting("不透明度", 0.5,
 		0.15, 0.85, 0.01, ValueDisplay.PERCENTAGE);
-	private final SliderSetting maxHeight = new SliderSetting("Max height",
-		"Maximum window height\n" + "0 = no limit", 200, 0, 1000, 25,
+	private final SliderSetting maxHeight = new SliderSetting("最大高度",
+		"最大窗高度\n" + "0 = 不限制", 200, 0, 1000, 25,
 		ValueDisplay.INTEGER);
 	
 	private final SliderSetting bgRed = new SliderSetting("BG red",

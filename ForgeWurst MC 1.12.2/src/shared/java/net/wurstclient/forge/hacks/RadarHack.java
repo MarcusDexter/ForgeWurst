@@ -59,8 +59,8 @@ public final class RadarHack extends Hack
 	
 	public RadarHack()
 	{
-		super("Radar",
-			"Shows the location of nearby entities.\n" + ChatFormatting.RED
+		super("雷达",
+			"显示附近实体的位置。\n" + ChatFormatting.RED
 				+ "red" + ChatFormatting.RESET + " - players\n"
 				+ ChatFormatting.GOLD + "orange" + ChatFormatting.RESET
 				+ " - monsters\n" + ChatFormatting.GREEN + "green"
