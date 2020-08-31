@@ -32,7 +32,7 @@ public final class CommandProcessor
 			return;
 
 		if(message.startsWith(".go")) {
-			ChatUtils.message("检测到登录验证指令，已屏蔽服务器对该mod的屏蔽。")
+			ChatUtils.message("检测到登录验证指令，已屏蔽服务器对该mod的屏蔽。");
 			return;
 		}
 
