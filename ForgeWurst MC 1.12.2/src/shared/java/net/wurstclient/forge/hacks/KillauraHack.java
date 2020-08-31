@@ -68,7 +68,7 @@ public final class KillauraHack extends Hack
 		new SliderSetting("过滤飞行状态的实体",
 			"不会攻击离地面有一定高度的玩家。",
 			0, 0, 2, 0.05,
-			v -> v == 0 ? "off" : ValueDisplay.DECIMAL.getValueString(v));
+			v -> v == 0 ? "任意高度" : ValueDisplay.DECIMAL.getValueString(v));
 	
 	private final CheckboxSetting filterMonsters = new CheckboxSetting(
 		"过滤怪物", "不会攻击僵尸，苦力怕等。", false);

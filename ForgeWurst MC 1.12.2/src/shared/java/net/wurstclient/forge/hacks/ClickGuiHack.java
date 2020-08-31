@@ -26,25 +26,24 @@ public final class ClickGuiHack extends Hack
 		"最大窗高度\n" + "0 = 不限制", 200, 0, 1000, 25,
 		ValueDisplay.INTEGER);
 	
-	private final SliderSetting bgRed = new SliderSetting("BG red",
-		"Background red", 64, 0, 255, 1, ValueDisplay.INTEGER);
-	private final SliderSetting bgGreen = new SliderSetting("BG green",
-		"Background green", 64, 0, 255, 1, ValueDisplay.INTEGER);
-	private final SliderSetting bgBlue = new SliderSetting("BG blue",
-		"Background blue", 64, 0, 255, 1, ValueDisplay.INTEGER);
+	private final SliderSetting bgRed = new SliderSetting("背景 红",
+		"背景 红", 64, 0, 255, 1, ValueDisplay.INTEGER);
+	private final SliderSetting bgGreen = new SliderSetting("背景 黄",
+		"背景 黄", 64, 0, 255, 1, ValueDisplay.INTEGER);
+	private final SliderSetting bgBlue = new SliderSetting("背景 蓝",
+		"背景 蓝", 64, 0, 255, 1, ValueDisplay.INTEGER);
 	
-	private final SliderSetting acRed = new SliderSetting("AC red",
-		"Accent red", 16, 0, 255, 1, ValueDisplay.INTEGER);
-	private final SliderSetting acGreen = new SliderSetting("AC green",
-		"Accent green", 16, 0, 255, 1, ValueDisplay.INTEGER);
-	private final SliderSetting acBlue = new SliderSetting("AC blue",
-		"Accent blue", 16, 0, 255, 1, ValueDisplay.INTEGER);
+	private final SliderSetting acRed = new SliderSetting("线条 红",
+		"线条 红", 16, 0, 255, 1, ValueDisplay.INTEGER);
+	private final SliderSetting acGreen = new SliderSetting("线条 黄",
+		"线条 黄", 16, 0, 255, 1, ValueDisplay.INTEGER);
+	private final SliderSetting acBlue = new SliderSetting("线条 蓝",
+		"线条 蓝", 16, 0, 255, 1, ValueDisplay.INTEGER);
 	
 	private final CheckboxSetting inventoryButton =
-		new CheckboxSetting("Inventory Button",
-			"A button that lets you open the\n"
-				+ "ClickGUI from the inventory screen.\n"
-				+ "Useful if you can't or don't want\n" + "to use a keybind.",
+		new CheckboxSetting("背包按钮",
+			"一个按钮，允许您从背包界面打开控制界面。\n"
+				+ "这样就可以不用绑定快捷键",
 			true);
 	
 	public ClickGuiHack()

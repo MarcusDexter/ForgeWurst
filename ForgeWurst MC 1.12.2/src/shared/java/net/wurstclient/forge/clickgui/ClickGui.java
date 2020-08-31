@@ -63,7 +63,7 @@ public final class ClickGui
 			
 		windows.addAll(windowMap.values());
 		
-		Window uiSettings = new Window("UI Settings");
+		Window uiSettings = new Window("界面设置");
 		for(Setting setting : hax.clickGuiHack.getSettings().values())
 			uiSettings.add(setting.getComponent());
 		windows.add(uiSettings);
