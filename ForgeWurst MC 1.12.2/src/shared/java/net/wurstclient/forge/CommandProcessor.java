@@ -28,9 +28,14 @@ public final class CommandProcessor
 	public void onSentMessage(WChatOutputEvent event)
 	{
 		String message = event.getMessage().trim();
-		if(!message.startsWith(".")||message.startsWith(".go"))
+		if(!message.startsWith("."))
 			return;
-		
+
+		if(message.startsWith(".go")) {
+			ChatUtils.message("检测到登录验证指令，已屏蔽服务器对该mod的屏蔽。")
+			return;
+		}
+
 		event.setCanceled(true);
 		Minecraft.getMinecraft().ingameGUI.getChatGUI()
 			.addToSentMessages(message);

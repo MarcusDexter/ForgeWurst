@@ -99,7 +99,7 @@ public final class KillauraHack extends Hack
 	
 	public KillauraHack()
 	{
-		super("自动攻击", "自动攻击您周围的实体。");
+		super("自动攻击", "自动攻击您周围的实体。（无视方块格挡）");
 		setCategory(Category.COMBAT);
 		addSetting(range);
 		addSetting(priority);
