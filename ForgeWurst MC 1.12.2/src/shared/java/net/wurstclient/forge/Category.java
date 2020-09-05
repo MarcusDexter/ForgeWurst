@@ -9,13 +9,13 @@ package net.wurstclient.forge;
 
 public enum Category
 {
-	BLOCKS("Blocks"),
-	MOVEMENT("Movement"),
-	COMBAT("Combat"),
-	RENDER("Render"),
-	CHAT("Chat"),
-	FUN("Fun"),
-	OTHER("Other");
+	BLOCKS("方块"),
+	MOVEMENT("移动"),
+	COMBAT("战斗"),
+	RENDER("渲染"),
+	CHAT("聊天"),
+	FUN("功能"),
+	OTHER("其他");
 	
 	private final String name;
 	
