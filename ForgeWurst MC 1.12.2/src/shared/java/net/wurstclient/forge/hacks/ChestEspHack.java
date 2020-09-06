@@ -39,7 +39,7 @@ import net.wurstclient.forge.utils.RotationUtils;
 public final class ChestEspHack extends Hack
 {
 	private final EnumSetting<Style> style =
-		new EnumSetting<>("Style", Style.values(), Style.BOXES);
+		new EnumSetting<>("样式", Style.values(), Style.BOXES);
 	
 	private final ArrayList<AxisAlignedBB> basicChests = new ArrayList<>();
 	private final ArrayList<AxisAlignedBB> trappedChests = new ArrayList<>();
@@ -297,9 +297,9 @@ public final class ChestEspHack extends Hack
 	
 	private enum Style
 	{
-		BOXES("Boxes only", true, false),
-		LINES("Lines only", false, true),
-		LINES_AND_BOXES("Lines and boxes", true, true);
+		BOXES("只显示面", true, false),
+		LINES("只显示棱", false, true),
+		LINES_AND_BOXES("显示面和棱", true, true);
 		
 		private final String name;
 		private final boolean boxes;

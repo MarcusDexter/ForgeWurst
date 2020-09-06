@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import net.wurstclient.forge.utils.ChatUtils;
 import org.lwjgl.opengl.GL11;
 
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
@@ -37,7 +38,7 @@ import net.wurstclient.forge.utils.RotationUtils;
 public final class MobEspHack extends Hack
 {
 	private final EnumSetting<Style> style =
-		new EnumSetting<>("Style", Style.values(), Style.BOXES);
+		new EnumSetting<>("样式", Style.values(), Style.BOXES);
 	private final CheckboxSetting filterInvisible = new CheckboxSetting(
 		"过滤隐形怪物", "不显示隐形怪物", false);
 	
@@ -181,9 +182,9 @@ public final class MobEspHack extends Hack
 	
 	private enum Style
 	{
-		BOXES("Boxes only", true, false),
-		LINES("Lines only", false, true),
-		LINES_AND_BOXES("Lines and boxes", true, true);
+		BOXES("只显示面", true, false),
+		LINES("只显示棱", false, true),
+		LINES_AND_BOXES("显示面和棱", true, true);
 		
 		private final String name;
 		private final boolean boxes;
